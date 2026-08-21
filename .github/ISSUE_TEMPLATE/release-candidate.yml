@@ -1,0 +1,92 @@
+name: Release candidate
+description: Nominate a DeSBi-related software output for cataloguing or release.
+title: "[release candidate] "
+labels:
+  - release-candidate
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to document provenance, rights and release readiness. Do not include credentials, restricted data or private cohort links.
+  - type: input
+    id: output
+    attributes:
+      label: Output name
+      placeholder: e.g. DNCIT
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Canonical upstream repository
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: false
+  - type: input
+    id: projects
+    attributes:
+      label: DeSBi project(s)
+      placeholder: P1, P2
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: DeSBi relationship and contribution
+      description: Explain what was developed within DeSBi and by whom.
+    validations:
+      required: true
+  - type: input
+    id: publication
+    attributes:
+      label: Publication or preprint
+      placeholder: DOI, citation or publication URL
+    validations:
+      required: false
+  - type: input
+    id: license
+    attributes:
+      label: Software licence
+      placeholder: SPDX identifier and link to licence file
+    validations:
+      required: true
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Maintainer and owner approval
+      description: Name the scientific maintainer and institutional/repository owner; record whether approval has been obtained.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Installation command, example command and expected output.
+    validations:
+      required: false
+  - type: textarea
+    id: restrictions
+    attributes:
+      label: Data, model-weight or access restrictions
+      description: Describe restrictions without exposing confidential information.
+    validations:
+      required: true
+  - type: dropdown
+    id: requested_status
+    attributes:
+      label: Requested status
+      options:
+        - Catalogue only
+        - Release candidate
+        - Verified release review
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have not included restricted data, credentials or private access links.
+          required: true
+        - label: I understand that a public repository is not automatically an official DeSBi release.
+          required: true

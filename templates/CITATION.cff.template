@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the software release and the associated paper."
+title: "<software title>"
+abstract: "<one-sentence description>"
+type: software
+version: "<upstream version or desbi-YYYY.MM.N>"
+date-released: "<YYYY-MM-DD>"
+repository-code: "https://github.com/dfg-desbi/<repository>"
+url: "<documentation or project page>"
+license: "<SPDX identifier>"
+authors:
+  - family-names: "<family name>"
+    given-names: "<given names>"
+    orcid: "https://orcid.org/<ORCID>"
+identifiers:
+  - type: doi
+    value: "<software DOI>"
+    description: "Archived software release"
+preferred-citation:
+  type: article
+  title: "<paper title>"
+  authors:
+    - family-names: "<family name>"
+      given-names: "<given names>"
+  doi: "<paper DOI>"
+  year: "<YYYY>"

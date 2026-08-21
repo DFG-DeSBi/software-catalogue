@@ -1,0 +1,555 @@
+schema_version: '1.0'
+organization: dfg-desbi
+audit:
+  date: '2026-08-21'
+  scope: Public repositories, the official DeSBi website, publication code links, and renewal materials.
+  caveat: A public repository and compatible licence do not by themselves establish authority to brand a fork as
+    an official DeSBi release. Maintainer and institutional approval remains required.
+status_definitions:
+  fork_now: Public, explicitly licensed and technically suitable for a first-wave fork, subject to maintainer approval
+    and release-quality checks.
+  owner_approval: Technically suitable, but governance or institutional ownership requires explicit approval before
+    an official fork.
+  cleanup_first: A public codebase exists, but licensing, provenance or packaging blocks an official release.
+  publish_required: The renewal names a reusable output, but no unambiguous public repository was located in this
+    audit.
+  do_not_fork: Superseded, external or otherwise unsuitable for DeSBi branding.
+entries:
+- slug: DNCIT
+  name: DNCIT
+  projects:
+  - P1
+  category: Statistical inference
+  description: Deep nonparametric conditional-independence testing for images and other high-dimensional modalities.
+  upstream: https://github.com/MSimnach/DNCIT
+  target: https://github.com/dfg-desbi/DNCIT
+  platform: GitHub
+  language: R
+  license: GPL-3.0-or-later
+  status: fork_now
+  relation: confirmed
+  readiness: high
+  action: Obtain maintainer sign-off; fork with full history; add CITATION.cff and an archived DeSBi snapshot.
+  notes: Mature R-package structure with tests, vignettes and CRAN submission metadata.
+- slug: quanda
+  name: quanda
+  projects:
+  - P2
+  category: Data attribution and XAI evaluation
+  description: Toolkit for quantitative evaluation of training-data attribution methods.
+  upstream: https://github.com/dilyabareeva/quanda
+  target: https://github.com/dfg-desbi/quanda
+  platform: GitHub
+  language: Python
+  license: MIT
+  status: fork_now
+  relation: confirmed_in_renewal
+  readiness: high
+  action: Obtain maintainer sign-off; fork and retain upstream as the canonical development home.
+  notes: 'Strong packaging baseline: documentation, tests, tutorials, changelog and contribution guidance.'
+- slug: arctique
+  name: Arctique
+  projects:
+  - P3
+  category: Uncertainty and benchmarking
+  description: Procedurally generated histopathology benchmark with controllable image and label uncertainty.
+  upstream: https://github.com/Kainmueller-Lab/arctique
+  target: https://github.com/dfg-desbi/arctique
+  platform: GitHub
+  language: Python / Blender
+  license: GPL-3.0
+  status: fork_now
+  relation: confirmed
+  readiness: high
+  action: Obtain maintainer sign-off; fork; document the relation between code, generated data and data licences.
+  notes: Public code with examples, tests and CI.
+- slug: transferGWAS
+  name: transferGWAS
+  projects:
+  - P1
+  - P2
+  - P4
+  - P5
+  category: Imaging genetics and statistical inference
+  description: Embed-then-test genome-wide association analysis for whole medical images.
+  upstream: https://github.com/mkirchler/transferGWAS
+  target: https://github.com/dfg-desbi/transferGWAS
+  platform: GitHub
+  language: Python / Bash
+  license: MIT
+  status: fork_now
+  relation: confirmed
+  readiness: medium
+  action: Obtain owner sign-off; fork; add current environment lockfiles and clearly separate reusable method code
+    from paper-specific reproduction code.
+  notes: Licensed and structured, but its environment and external binary dependencies should be refreshed for a
+    2026 release.
+- slug: MFD
+  name: MFD
+  projects:
+  - P1
+  - P4
+  - P5
+  category: Representation disentanglement and genomics
+  description: Metadata-guided feature disentanglement for functional genomics.
+  upstream: https://github.com/HealthML/MFD
+  target: https://github.com/dfg-desbi/MFD
+  platform: GitHub
+  language: Python / Snakemake
+  license: MIT
+  status: fork_now
+  relation: confirmed
+  readiness: medium
+  action: Obtain owner sign-off; fork; add citation metadata, a small runnable example and CI for the core method.
+  notes: Includes source, notebooks, documentation, workflows and environment definitions.
+- slug: semanticlens
+  name: SemanticLens
+  projects:
+  - P2
+  category: Concept and mechanistic interpretability
+  description: Semantic interpretation and validation of components in large vision models.
+  upstream: https://github.com/jim-berend/semanticlens
+  target: https://github.com/dfg-desbi/semanticlens
+  platform: GitHub
+  language: Python
+  license: BSD-3-Clause
+  status: fork_now
+  relation: confirmed_in_renewal
+  readiness: high
+  action: Confirm DeSBi release attribution with all maintainers; fork without changing the canonical package identity.
+  notes: Well packaged with tests, tutorials, documentation, lockfile and CITATION.cff.
+- slug: DeepRepViz
+  name: DeepRepViz
+  projects:
+  - P7
+  category: Confounder diagnostics
+  description: Visualization and Con-score diagnostics for confounder encoding in deep representations.
+  upstream: https://github.com/RoshanRane/DeepRepViz
+  target: https://github.com/dfg-desbi/DeepRepViz
+  platform: GitHub
+  language: Python
+  license: BSD-4-Clause
+  status: fork_now
+  relation: confirmed
+  readiness: medium
+  action: Obtain maintainer sign-off; fork; add automated smoke tests, citation metadata and a versioned release.
+  notes: Public package and tutorial; the associated work explicitly acknowledges DeSBi funding.
+- slug: toybrains
+  name: Toybrains
+  projects:
+  - P7
+  - P1
+  category: Causal simulation and benchmarking
+  description: Synthetic neuroimaging-inspired benchmark with a controllable causal data-generating graph.
+  upstream: https://github.com/RoshanRane/toybrains
+  target: https://github.com/dfg-desbi/toybrains
+  platform: GitHub
+  language: Python
+  license: GPL-3.0
+  status: fork_now
+  relation: confirmed_in_renewal
+  readiness: high
+  action: Obtain maintainer sign-off; fork; preserve the existing canonical Zenodo citation and record the upstream
+    commit used for the DeSBi snapshot.
+  notes: Already archived as version 1.0.0 at Zenodo, DOI 10.5281/zenodo.14509513.
+- slug: DualXDA
+  name: DualXDA
+  projects:
+  - P2
+  category: Data attribution
+  description: Sparse, efficient and feature-explainable attribution of predictions to training samples.
+  upstream: https://github.com/gumityolcu/DualXDA
+  target: https://github.com/dfg-desbi/DualXDA
+  platform: GitHub
+  language: Python
+  license: BSD-3-Clause-Clear
+  status: fork_now
+  relation: confirmed_successor
+  readiness: high
+  action: Confirm DeSBi attribution and the intended replacement of DualView; fork the maintained successor only.
+  notes: The older DualView repository states that it is outdated and points users to DualXDA.
+- slug: EmmaEmb
+  name: EmmaEmb
+  projects:
+  - P5
+  category: Representation comparison
+  description: Framework for comparing and aligning embedding spaces.
+  upstream: https://github.com/broadinstitute/EmmaEmb
+  target: https://github.com/dfg-desbi/EmmaEmb
+  platform: GitHub
+  language: Python
+  license: MIT
+  status: owner_approval
+  relation: confirmed_in_renewal
+  readiness: high_technical
+  action: Prefer a catalogue link unless the Broad Institute maintainers explicitly approve an official DeSBi fork
+    and release label.
+  notes: Technically forkable, but institutional ownership and multi-consortium provenance make governance approval
+    essential.
+- slug: plrp
+  name: PLRP
+  projects:
+  - P5
+  category: Sparse explanations
+  description: Pruned layer-wise relevance propagation for sparse explanations.
+  upstream: https://gitlab.com/dacs-hpi/plrp
+  target: https://github.com/dfg-desbi/plrp
+  platform: GitLab
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: medium
+  action: Validate or add an explicit licence, confirm owners, then import or mirror the GitLab repository while
+    preserving full history.
+  notes: This is an import/mirror, not a native GitHub fork.
+- slug: Reveal2Revise
+  name: Reveal2Revise
+  projects:
+  - P2
+  category: Bias discovery and correction
+  description: Explainable-AI lifecycle for identifying, correcting and re-evaluating spurious model behaviour.
+  upstream: https://github.com/maxdreyer/Reveal2Revise
+  target: https://github.com/dfg-desbi/Reveal2Revise
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence and funding/citation metadata upstream before forking.
+  notes: Official DeSBi publication page links to this repository.
+- slug: pcx
+  name: PCX
+  projects:
+  - P2
+  category: Concept explanations
+  description: Prototypical concept-based explanations for analysing model concepts and their representative examples.
+  upstream: https://github.com/maxdreyer/pcx
+  target: https://github.com/dfg-desbi/pcx
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence, citation metadata and a minimal reproducible example before forking.
+  notes: Treat package/repository naming carefully; preserve the canonical upstream name.
+- slug: reactive_correction
+  name: Reactive correction / R-ClArC
+  projects:
+  - P2
+  category: Bias correction
+  description: Conditional post-hoc suppression of harmful model features.
+  upstream: https://github.com/dilyabareeva/reactive_correction
+  target: https://github.com/dfg-desbi/reactive_correction
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence and a release-level README that identifies the associated paper and DeSBi contribution.
+  notes: ''
+- slug: PURE
+  name: PURE
+  projects:
+  - P2
+  category: Mechanistic interpretability
+  description: Circuit-based decomposition of polysemantic neurons into purer features.
+  upstream: https://github.com/maxdreyer/PURE
+  target: https://github.com/dfg-desbi/PURE
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence, citation metadata and a stable environment before forking.
+  notes: ''
+- slug: cav-unifying-view-adversarial
+  name: Probabilistic / pattern CAV framework
+  projects:
+  - P2
+  category: Concept activation vectors
+  description: Unified analysis of concept activation vectors and adversarial robustness.
+  upstream: https://github.com/jawhar00/cav-unifying-view-adversarial
+  target: https://github.com/dfg-desbi/cav-unifying-view-adversarial
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: explicit_funding_acknowledgement
+  readiness: blocked_legal
+  action: Add an explicit licence and stable release metadata before forking.
+  notes: The public repository contains an explicit DeSBi funding acknowledgement.
+- slug: rrclarc
+  name: RR-ClArC / latent-space bias unlearning
+  projects:
+  - P2
+  category: Bias correction
+  description: Gradient-penalisation methods for unlearning model biases in latent space.
+  upstream: https://github.com/frederikpahde/rrclarc
+  target: https://github.com/dfg-desbi/rrclarc
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence and citation/funding metadata before forking.
+  notes: ''
+- slug: TW-autoencoder
+  name: TW-autoencoder
+  projects:
+  - P3
+  - P2
+  category: Model guidance and segmentation
+  description: Code for model guidance via explanations and weakly supervised segmentation.
+  upstream: https://github.com/Kainmueller-Lab/TW-autoencoder
+  target: https://github.com/dfg-desbi/TW-autoencoder
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: blocked_legal
+  action: Add an explicit licence, installation instructions and a small demonstration before forking.
+  notes: ''
+- slug: transfer-gwas-brain-mri
+  name: transfer-gwas-brain-mri
+  projects:
+  - P1
+  - P2
+  - P4
+  - P5
+  category: Paper-specific imaging genetics
+  description: Supplementary repository for the UK Biobank brain-MRI transferGWAS study.
+  upstream: https://github.com/HealthML/transfer-gwas-brain-mri
+  target: https://github.com/dfg-desbi/transfer-gwas-brain-mri
+  platform: GitHub
+  language: Mixed / documentation
+  license: NOASSERTION
+  status: cleanup_first
+  relation: confirmed
+  readiness: low
+  action: Do not make this a flagship fork yet; first decide whether its content should be merged into or linked
+    from the main transferGWAS release.
+  notes: The public repository appears supplementary and thin compared with the main method repository.
+- slug: medical-ai-safety
+  name: medical-ai-safety
+  projects:
+  - P2
+  category: Medical AI safety
+  description: Candidate repository for safety-oriented evaluation and correction of medical AI.
+  upstream: https://github.com/frederikpahde/medical-ai-safety
+  target: https://github.com/dfg-desbi/medical-ai-safety
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: cleanup_first
+  relation: candidate
+  readiness: blocked_relation_and_legal
+  action: Confirm that the repository is a DeSBi output and add an explicit licence before considering a fork.
+  notes: ''
+- slug: BaGGLS
+  name: BaGGLS
+  projects:
+  - P5
+  - P6
+  category: Bayesian structured modelling
+  description: Bayesian overlapping-group shrinkage implementation.
+  upstream: null
+  target: https://github.com/dfg-desbi/BaGGLS
+  platform: null
+  language: R / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Identify the maintained codebase, publish it with a licence and citation metadata, then create the first
+    DeSBi release.
+  notes: ''
+- slug: abamlss
+  name: abamlss variational-inference framework
+  projects:
+  - P5
+  category: Structured additive distributional regression
+  description: Scalable variational inference for GAMLSS/SADR models.
+  upstream: null
+  target: https://github.com/dfg-desbi/abamlss
+  platform: null
+  language: R / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Confirm the canonical package/repository and whether it is already public under another name; publish
+    or catalogue accordingly.
+  notes: ''
+- slug: AttnLRP-DNABERT2
+  name: AttnLRP adaptation for DNABERT-2
+  projects:
+  - P5
+  category: Genomics explanations
+  description: Architecture-aware relevance propagation for genome language models.
+  upstream: null
+  target: https://github.com/dfg-desbi/AttnLRP-DNABERT2
+  platform: null
+  language: Python
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Publish the DeSBi adaptation rather than forking a generic LXT or DNABERT-2 dependency repository.
+  notes: ''
+- slug: PHO
+  name: Post-hoc orthogonalisation (PHO)
+  projects:
+  - P5
+  - P7
+  category: Representation disentanglement
+  description: Post-hoc orthogonalisation for separating structured effects from learned representations.
+  upstream: null
+  target: https://github.com/dfg-desbi/PHO
+  platform: null
+  language: Python / R / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Identify and package the shared implementation, including a minimal example and tests.
+  notes: ''
+- slug: xai-evaluation-toolkit
+  name: XAI evaluation toolkit
+  projects:
+  - P4
+  - P5
+  category: XAI evaluation
+  description: Shared benchmarking and visualisation harness for explanation methods in genomics.
+  upstream: null
+  target: https://github.com/dfg-desbi/xai-evaluation-toolkit
+  platform: null
+  language: Python / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Resolve the final repository name and publication status, then publish the shared toolkit.
+  notes: ''
+- slug: ICON-Decomposition
+  name: ICON Decomposition
+  projects:
+  - P7
+  - P1
+  - P4
+  category: Concept and confounder analysis
+  description: Orthogonal concept directions for screening deep representations for shortcuts and biases.
+  upstream: null
+  target: https://github.com/dfg-desbi/ICON-Decomposition
+  platform: null
+  language: Python / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Publish the project implementation; do not confuse it with unrelated repositories named ICON.
+  notes: ''
+- slug: CovLRP
+  name: CovLRP and second-order uncertainty explanations
+  projects:
+  - P2
+  - P3
+  category: Uncertainty explanations
+  description: Second-order explanation methods for predictive uncertainty.
+  upstream: null
+  target: https://github.com/dfg-desbi/CovLRP
+  platform: null
+  language: Python / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed
+  readiness: not_publicly_located
+  action: Locate or publish the paper implementation with a licence and reproducibility instructions.
+  notes: ''
+- slug: ovb-control-variable
+  name: Control-variable / omitted-variable-bias correction
+  projects:
+  - P7
+  category: Confounder correction
+  description: Confounder-aware deep learning that separates omitted-variable bias from mediated effects.
+  upstream: null
+  target: https://github.com/dfg-desbi/ovb-control-variable
+  platform: null
+  language: Python / R / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Publish a reusable implementation and the simulation/benchmark pipeline.
+  notes: ''
+- slug: explainable-deep-tests
+  name: Explainable deep test statistics
+  projects:
+  - P1
+  - P2
+  category: Population-level explanations
+  description: Sample- and feature-level explanations for deep two-sample and related statistical tests.
+  upstream: null
+  target: https://github.com/dfg-desbi/explainable-deep-tests
+  platform: null
+  language: Python / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Consolidate the paper implementations into one citable package or clearly catalogue separate repositories.
+  notes: ''
+- slug: counterfactual-deep-tests
+  name: Counterfactual explanations for deep tests
+  projects:
+  - P1
+  - P2
+  category: Counterfactual explanations
+  description: Plausible sample-level edits that reduce distributional discrepancies measured by deep tests.
+  upstream: null
+  target: https://github.com/dfg-desbi/counterfactual-deep-tests
+  platform: null
+  language: Python / unknown
+  license: NOASSERTION
+  status: publish_required
+  relation: confirmed_in_renewal
+  readiness: not_publicly_located
+  action: Publish the accepted-paper implementation when author and institutional approvals are complete.
+  notes: ''
+- slug: DualView
+  name: DualView
+  projects:
+  - P2
+  category: Data attribution
+  description: Earlier data-attribution implementation superseded by DualXDA.
+  upstream: https://github.com/gumityolcu/DualView
+  target: null
+  platform: GitHub
+  language: Python
+  license: NOASSERTION
+  status: do_not_fork
+  relation: confirmed
+  readiness: superseded
+  action: Catalogue only as historical provenance and direct users to DualXDA.
+  notes: The repository itself states that it is outdated.
+- slug: generic-dependencies
+  name: Generic dependencies
+  projects: []
+  category: External dependencies
+  description: General-purpose projects used by DeSBi code, such as Captum, LXT, DNABERT-2 or generic CRP libraries.
+  upstream: null
+  target: null
+  platform: null
+  language: Mixed
+  license: various
+  status: do_not_fork
+  relation: external
+  readiness: not_a_desbi_output
+  action: Reference them as dependencies; do not brand them as DeSBi releases.
+  notes: ''
