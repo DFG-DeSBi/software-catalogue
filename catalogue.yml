@@ -193,11 +193,12 @@ entries:
   platform: GitLab
   language: Python
   license: GPL-3.0
-  status: released
+  status: cleanup_first
   relation: confirmed
   readiness: medium
-  action: Released as v1.0.0 (desbi-2026.09.1). GitHub mirror created with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
-  notes: GitLab upstream mirrored to GitHub fork while preserving full history.
+  action: Validate or add an explicit licence, confirm owners, then import or mirror the GitLab repository while
+    preserving full history.
+  notes: This is an import/mirror, not a native GitHub fork.
 - slug: Reveal2Revise
   name: Reveal2Revise
   projects:
