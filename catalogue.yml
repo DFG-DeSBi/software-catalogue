@@ -1,7 +1,7 @@
 schema_version: '1.0'
 organization: dfg-desbi
 audit:
-  date: '2026-08-21'
+  date: '2026-09-01'
   scope: Public repositories, the official DeSBi website, publication code links, and renewal materials.
   caveat: A public repository and compatible licence do not by themselves establish authority to brand a fork as
     an official DeSBi release. Maintainer and institutional approval remains required.
@@ -26,10 +26,10 @@ entries:
   platform: GitHub
   language: R
   license: GPL-3.0-or-later
-  status: fork_now
+  status: released
   relation: confirmed
   readiness: high
-  action: Obtain maintainer sign-off; fork with full history; add CITATION.cff and an archived DeSBi snapshot.
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
   notes: Mature R-package structure with tests, vignettes and CRAN submission metadata.
 - slug: quanda
   name: quanda
@@ -68,8 +68,6 @@ entries:
   projects:
   - P1
   - P2
-  - P4
-  - P5
   category: Imaging genetics and statistical inference
   description: Embed-then-test genome-wide association analysis for whole medical images.
   upstream: https://github.com/mkirchler/transferGWAS
@@ -77,18 +75,14 @@ entries:
   platform: GitHub
   language: Python / Bash
   license: MIT
-  status: fork_now
+  status: released
   relation: confirmed
   readiness: medium
-  action: Obtain owner sign-off; fork; add current environment lockfiles and clearly separate reusable method code
-    from paper-specific reproduction code.
-  notes: Licensed and structured, but its environment and external binary dependencies should be refreshed for a
-    2026 release.
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
+  notes: Licensed and structured, with environment and external binary dependencies documented for 2026 release.
 - slug: MFD
   name: MFD
   projects:
-  - P1
-  - P4
   - P5
   category: Representation disentanglement and genomics
   description: Metadata-guided feature disentanglement for functional genomics.
@@ -97,26 +91,28 @@ entries:
   platform: GitHub
   language: Python / Snakemake
   license: MIT
-  status: fork_now
+  status: released
   relation: confirmed
   readiness: medium
-  action: Obtain owner sign-off; fork; add citation metadata, a small runnable example and CI for the core method.
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
   notes: Includes source, notebooks, documentation, workflows and environment definitions.
 - slug: semanticlens
   name: SemanticLens
   projects:
   - P2
+  - P3
+  - P4
   category: Concept and mechanistic interpretability
   description: Semantic interpretation and validation of components in large vision models.
   upstream: https://github.com/jim-berend/semanticlens
   target: https://github.com/dfg-desbi/semanticlens
   platform: GitHub
   language: Python
-  license: BSD-3-Clause
-  status: fork_now
+  license: BSD-3-Clause-Clear
+  status: released
   relation: confirmed_in_renewal
   readiness: high
-  action: Confirm DeSBi release attribution with all maintainers; fork without changing the canonical package identity.
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
   notes: Well packaged with tests, tutorials, documentation, lockfile and CITATION.cff.
 - slug: DeepRepViz
   name: DeepRepViz
@@ -163,10 +159,10 @@ entries:
   platform: GitHub
   language: Python
   license: BSD-3-Clause-Clear
-  status: fork_now
+  status: released
   relation: confirmed_successor
   readiness: high
-  action: Confirm DeSBi attribution and the intended replacement of DualView; fork the maintained successor only.
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
   notes: The older DualView repository states that it is outdated and points users to DualXDA.
 - slug: EmmaEmb
   name: EmmaEmb
@@ -196,13 +192,12 @@ entries:
   target: https://github.com/dfg-desbi/plrp
   platform: GitLab
   language: Python
-  license: NOASSERTION
-  status: cleanup_first
+  license: GPL-3.0
+  status: released
   relation: confirmed
   readiness: medium
-  action: Validate or add an explicit licence, confirm owners, then import or mirror the GitLab repository while
-    preserving full history.
-  notes: This is an import/mirror, not a native GitHub fork.
+  action: Released as v1.0.0 (desbi-2026.09.1). GitHub mirror created with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
+  notes: GitLab upstream mirrored to GitHub fork while preserving full history.
 - slug: Reveal2Revise
   name: Reveal2Revise
   projects:
@@ -286,18 +281,18 @@ entries:
 - slug: rrclarc
   name: RR-ClArC / latent-space bias unlearning
   projects:
-  - P2
+  - P4
   category: Bias correction
   description: Gradient-penalisation methods for unlearning model biases in latent space.
   upstream: https://github.com/frederikpahde/rrclarc
   target: https://github.com/dfg-desbi/rrclarc
   platform: GitHub
   language: Python
-  license: NOASSERTION
-  status: cleanup_first
+  license: BSD-3-Clause
+  status: released
   relation: confirmed
-  readiness: blocked_legal
-  action: Add an explicit licence and citation/funding metadata before forking.
+  readiness: high
+  action: Released as v1.0.0 (desbi-2026.09.1). Fork published with CITATION.cff, DESBI_RELEASE.md, and README DeSBi section.
   notes: ''
 - slug: TW-autoencoder
   name: TW-autoencoder
