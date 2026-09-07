@@ -1,6 +1,6 @@
 # Public repository audit and fork plan
 
-**Audit date:** 2026-08-21  
+**Audit date:** 2026-09-07  
 **Scope:** public GitHub/GitLab repositories, the official DeSBi site, publication code links and the current renewal materials.
 
 ## Decision principle
