@@ -17,12 +17,9 @@ A raw fork is therefore an intake mechanism, not the final product.
 |---|---|---|---|---|---|---|
 | **DNCIT** | P1 | Deep nonparametric conditional-independence testing for images and other high-dimensional modalities. | [DNCIT](https://github.com/MSimnach/DNCIT) | `GPL-3.0-or-later` | high | Obtain maintainer sign-off; fork with full history; add CITATION.cff and an archived DeSBi snapshot. |
 | **quanda** | P2 | Toolkit for quantitative evaluation of training-data attribution methods. | [quanda](https://github.com/dilyabareeva/quanda) | `MIT` | high | Obtain maintainer sign-off; fork and retain upstream as the canonical development home. |
-| **Arctique** | P3 | Procedurally generated histopathology benchmark with controllable image and label uncertainty. | [arctique](https://github.com/Kainmueller-Lab/arctique) | `GPL-3.0` | high | Obtain maintainer sign-off; fork; document the relation between code, generated data and data licences. |
 | **transferGWAS** | P1, P2, P4, P5 | Embed-then-test genome-wide association analysis for whole medical images. | [transferGWAS](https://github.com/mkirchler/transferGWAS) | `MIT` | medium | Obtain owner sign-off; fork; add current environment lockfiles and clearly separate reusable method code from paper-specific reproduction code. |
 | **MFD** | P1, P4, P5 | Metadata-guided feature disentanglement for functional genomics. | [MFD](https://github.com/HealthML/MFD) | `MIT` | medium | Obtain owner sign-off; fork; add citation metadata, a small runnable example and CI for the core method. |
 | **SemanticLens** | P2 | Semantic interpretation and validation of components in large vision models. | [semanticlens](https://github.com/jim-berend/semanticlens) | `BSD-3-Clause` | high | Confirm DeSBi release attribution with all maintainers; fork without changing the canonical package identity. |
-| **DeepRepViz** | P7 | Visualization and Con-score diagnostics for confounder encoding in deep representations. | [DeepRepViz](https://github.com/RoshanRane/DeepRepViz) | `BSD-4-Clause` | medium | Obtain maintainer sign-off; fork; add automated smoke tests, citation metadata and a versioned release. |
-| **Toybrains** | P7, P1 | Synthetic neuroimaging-inspired benchmark with a controllable causal data-generating graph. | [toybrains](https://github.com/RoshanRane/toybrains) | `GPL-3.0` | high | Obtain maintainer sign-off; fork; preserve the existing canonical Zenodo citation and record the upstream commit used for the DeSBi snapshot. |
 | **DualXDA** | P2 | Sparse, efficient and feature-explainable attribution of predictions to training samples. | [DualXDA](https://github.com/gumityolcu/DualXDA) | `BSD-3-Clause-Clear` | high | Confirm DeSBi attribution and the intended replacement of DualView; fork the maintained successor only. |
 
 ## Licensed but governance approval required
@@ -34,6 +31,9 @@ A raw fork is therefore an intake mechanism, not the final product.
 | Output | Projects | Upstream | Blocking issue | Required action |
 |---|---|---|---|---|
 | **PLRP** | P5 | [plrp](https://gitlab.com/dacs-hpi/plrp) | GitLab import plus licence validation | Validate or add an explicit licence, confirm owners, then import or mirror the GitLab repository while preserving full history. |
+| **Arctique** | P3 | Procedurally generated histopathology benchmark with controllable image and label uncertainty. | [arctique](https://github.com/Kainmueller-Lab/arctique) | `GPL-3.0` | high | Obtain maintainer sign-off; fork; document the relation between code, generated data and data licences. |
+| **DeepRepViz** | P7 | Visualization and Con-score diagnostics for confounder encoding in deep representations. | [DeepRepViz](https://github.com/RoshanRane/DeepRepViz) | `BSD-4-Clause` | medium | Obtain maintainer sign-off; fork; add automated smoke tests, citation metadata and a versioned release. |
+| **Toybrains** | P7, P1 | Synthetic neuroimaging-inspired benchmark with a controllable causal data-generating graph. | [toybrains](https://github.com/RoshanRane/toybrains) | `GPL-3.0` | high | Obtain maintainer sign-off; fork; preserve the existing canonical Zenodo citation and record the upstream commit used for the DeSBi snapshot. |
 | **Reveal2Revise** | P2 | [Reveal2Revise](https://github.com/maxdreyer/Reveal2Revise) | No explicit reusable-software licence was confirmed | Add an explicit licence and funding/citation metadata upstream before forking. |
 | **PCX** | P2 | [pcx](https://github.com/maxdreyer/pcx) | No explicit reusable-software licence was confirmed | Add an explicit licence, citation metadata and a minimal reproducible example before forking. |
 | **Reactive correction / R-ClArC** | P2 | [reactive_correction](https://github.com/dilyabareeva/reactive_correction) | No explicit reusable-software licence was confirmed | Add an explicit licence and a release-level README that identifies the associated paper and DeSBi contribution. |
@@ -69,15 +69,12 @@ For the renewal, the most convincing initial set is:
 
 1. **DNCIT** — direct evidence of the core statistical-inference contribution;
 2. **quanda** — mature, reusable evaluation infrastructure;
-3. **Arctique** — a visible benchmark and data-generation contribution;
-4. **Toybrains** — already versioned and archived, demonstrating strong reproducibility;
-5. **SemanticLens** — polished concept-level/mechanistic interpretation software;
-6. **MFD** — a cross-project genomics output;
-7. **DeepRepViz** — a concrete confounder-diagnostics tool;
-8. **transferGWAS** — a recognizable embed-then-test application pipeline;
-9. **DualXDA** — a maintained successor for data attribution.
+3. **SemanticLens** — polished concept-level/mechanistic interpretation software;
+4. **MFD** — a cross-project genomics output;
+5. **transferGWAS** — a recognizable embed-then-test application pipeline;
+6. **DualXDA** — a maintained successor for data attribution.
 
-The profile page can show all nine, while the organization should pin a balanced subset spanning inference, explanation, uncertainty, confounding, simulation and genomics.
+The profile page can show all, while the organization should pin a balanced subset spanning inference, explanation, uncertainty, confounding, simulation and genomics.
 
 ## Five-day rollout for renewal evidence
 
@@ -97,7 +94,7 @@ The profile page can show all nine, while the organization should pin a balanced
 
 ### Day 3 — verified release core
 
-Prioritize DNCIT, quanda, Arctique, Toybrains and SemanticLens. For each:
+Prioritize DNCIT, quanda and SemanticLens. For each:
 
 - record the upstream tag/commit;
 - run the installation and minimal example;
@@ -107,7 +104,7 @@ Prioritize DNCIT, quanda, Arctique, Toybrains and SemanticLens. For each:
 
 ### Day 4 — cross-project evidence and blockers
 
-- Prepare MFD, transferGWAS, DeepRepViz and DualXDA.
+- Prepare MFD, transferGWAS and DualXDA.
 - Open upstream issues or pull requests for Wave-2 licences rather than silently adding licences only in the forks.
 - Assign every “publish required” output to a project PI/maintainer with a due date and repository decision.
 
