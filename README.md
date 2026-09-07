@@ -12,19 +12,14 @@ This repository is the authoritative index of software, benchmarks and reusable 
 | **Publish required** | A reusable output is named in DeSBi materials, but no unambiguous public repository was located. |
 | **Do not fork** | Superseded, external or otherwise unsuitable for DeSBi branding. |
 
-## First-wave candidates
+## Second-wave candidates
 
 | Output | Research role | Upstream | Licence |
 |---|---|---|---|
-| DNCIT | Conditional-independence testing | [MSimnach/DNCIT](https://github.com/MSimnach/DNCIT) | GPL-3.0-or-later |
 | quanda | Evaluation of training-data attribution | [dilyabareeva/quanda](https://github.com/dilyabareeva/quanda) | MIT |
 | Arctique | Histopathology uncertainty benchmark | [Kainmueller-Lab/arctique](https://github.com/Kainmueller-Lab/arctique) | GPL-3.0 |
-| transferGWAS | Imaging genetics | [mkirchler/transferGWAS](https://github.com/mkirchler/transferGWAS) | MIT |
-| MFD | Metadata-guided representation disentanglement | [HealthML/MFD](https://github.com/HealthML/MFD) | MIT |
-| SemanticLens | Semantic/mechanistic model analysis | [jim-berend/semanticlens](https://github.com/jim-berend/semanticlens) | BSD-3-Clause |
 | DeepRepViz | Confounder diagnostics | [RoshanRane/DeepRepViz](https://github.com/RoshanRane/DeepRepViz) | BSD-4-Clause |
 | Toybrains | Causal synthetic benchmark | [RoshanRane/toybrains](https://github.com/RoshanRane/toybrains) | GPL-3.0 |
-| DualXDA | Sparse and explainable data attribution | [gumityolcu/DualXDA](https://github.com/gumityolcu/DualXDA) | BSD-3-Clause-Clear |
 
 “Fork now” does **not** mean “brand without asking.” Written maintainer approval and the release checklist are still required.
 
