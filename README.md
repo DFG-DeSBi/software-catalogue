@@ -34,4 +34,4 @@ This repository is the authoritative index of software, benchmarks and reusable 
 
 ## Audit date and maintenance
 
-Initial audit: **2026-09-07**. Re-run the audit before the renewal review and then at least twice per year. Repository metadata changes quickly; `catalogue.yml` records the current decision, not an eternal truth.
+Audit date: **2026-09-07**. Re-run the audit before the renewal review and then at least twice per year. Repository metadata changes quickly; `catalogue.yml` records the current decision, not an eternal truth.
